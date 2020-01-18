@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93631d6d-e2c6-4bd8-8419-b270b9bf1899" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Algorithms and Data Structures Quarter 1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Algorithms and Data Structures Quarter 1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/Percolations Collab.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/out/production/Percolations Collab/com/jetbrains/Percolation_CK.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/out/production/Percolations Collab/com/jetbrains/Percolation_DRK.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/src/com/jetbrains/Percolation_CK.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/src/com/jetbrains/Percolation_DRK.java" beforeDir="false" />
-    </list>
+    <list default="true" id="93631d6d-e2c6-4bd8-8419-b270b9bf1899" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
