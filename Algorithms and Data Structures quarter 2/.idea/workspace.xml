@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="93631d6d-e2c6-4bd8-8419-b270b9bf1899" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jetbrains/Percolation_CK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jetbrains/Percolation_CK.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,9 +45,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Percolation_CK">
+  <component name="RunManager" selected="Application.TestingClass">
     <configuration name="Achtung" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jetbrains.Achtung" />
+      <module name="Algorithms and Data Structures quarter 2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jetbrains.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DynamicArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jetbrains.DynamicArray" />
       <module name="Algorithms and Data Structures quarter 2" />
       <extension name="coverage">
         <pattern>
@@ -99,8 +111,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestingClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jetbrains.TestingClass" />
+      <module name="Algorithms and Data Structures quarter 2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jetbrains.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestingClass" />
+        <item itemvalue="Application.DynamicArray" />
         <item itemvalue="Application.Percolation_CK" />
         <item itemvalue="Application.PrintBinary" />
       </list>
