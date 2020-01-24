@@ -19,12 +19,16 @@ package com.jetbrains;
  * Explain why we don’t shrink it to half the size when it is 1/2 full or less.
  *
  * ANSWER:
- *  You do not shrink it to half size when doubled because: when you reach the point where
- *  N (number of items) == items.length (the current capacity) you double the capacity. At this moment the amount of items in the
- *  array is now half the capacity, which would mean that you half the size again, which would mean you would double the the size, which
- *  would mean you would have to double the size, ..., etc.
- *  You would end up constantly doubling and halving the size of the array which would be rather wasteful and
- *  bad coding!
+ * You do not shrink the size of the array to half  its size when it is ½
+ * full or less because: The code will be put into a contradictory state
+ * and the capacity will be changed more often than necessary which
+ * is inefficient. When a new item is pushed onto the stack and the number of
+ * items == the capacity the size is now set to be double what it was before.
+ * Yet at this very moment the number of elements would be half the new capacity.
+ * If you’re supposed to shrink when at half capacity then … Hmm a huge problem.
+ * As soon as one condition is met, the other tries to reverse the action
+ * that the aforementioned condition would call for.
+ * It would make a contradictory system that is confusing and inefficient.
  */
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -162,7 +166,7 @@ public class DynamicShrinking<Item> implements Iterable<Item> {
     {
         return N == 0; //if it is return true if not return false
     }
-    
+
     /*
     MAIN METHOD
      */
