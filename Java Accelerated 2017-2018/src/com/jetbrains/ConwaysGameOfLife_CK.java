@@ -36,7 +36,7 @@ package com.jetbrains;
 public class ConwaysGameOfLife_CK {
     public static void main(String[] args) {
         int n = Integer.parseInt(args[0]); //takes comand line n value to determine the dimensions/sclaing
-        StdDraw.setCanvasSize(300,300); //set canvas size
+        StdDraw.setCanvasSize(800,800); //set canvas size
         StdDraw.setXscale(1, n+1); //set veiwing scale
         StdDraw.setYscale(1, n+1);
         StdDraw.setPenColor(StdDraw.BLACK); //default pen color
@@ -45,8 +45,197 @@ public class ConwaysGameOfLife_CK {
         boolean[][] dedoalive = new boolean[n+2][n+2]; //array keeping track if a cell is alive or ded(+2 because of edge)
 
         //initial cells which are alive
+        //Glider GUN Glider GUN Glider GUN Glider GUN Glider GUN Glider GUN Glider GUN
+        dedoalive[2][n-5] = true;//left block
+        dedoalive[2][n-6] = true;
+        dedoalive[3][n-5] = true;
+        dedoalive[3][n-6] = true;
 
-        //PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17
+        dedoalive[11+1][n-5] = true;  // left semi circle
+        dedoalive[11+1][n-6] = true;
+        dedoalive[11+1][n-7] = true;
+
+        dedoalive[12+1][n-4] = true;
+        dedoalive[12+1][n-8] = true;
+        dedoalive[13+1][n-3] = true;
+        dedoalive[14+1][n-3] = true;
+        dedoalive[13+1][n-9] = true;
+        dedoalive[14+1][n-9] = true;
+
+        dedoalive[15+1][n-6] = true; //little dot
+        dedoalive[16+1][n-4] = true;
+        dedoalive[16+1][n-8] = true;
+        dedoalive[17+1][n-5] = true;
+        dedoalive[17+1][n-6] = true;//right thing
+        dedoalive[17+1][n-7] = true;
+        dedoalive[18+1][n-6] = true;
+
+        dedoalive[21+1][n-3] = true;
+        dedoalive[21+1][n-4] = true;
+        dedoalive[21+1][n-5] = true;
+        dedoalive[22+1][n-3] = true;
+        dedoalive[22+1][n-4] = true;
+        dedoalive[22+1][n-5] = true; //weird right bug on its side
+        dedoalive[23+1][n-2] = true;
+        dedoalive[23+1][n-6] = true;
+        dedoalive[25+1][n-1] = true;
+        dedoalive[25+1][n-2] = true;
+        dedoalive[25+1][n-6] = true;
+        dedoalive[25+1][n-7] = true;
+
+        dedoalive[35+1][n-3] = true;
+        dedoalive[35+1][n-4] = true;
+        dedoalive[36+1][n-3] = true;
+        dedoalive[36+1][n-4] = true;
+
+        //MAIN ANIMATION LOOP
+        while (true)
+        {
+            //ALL THIS DOES IS LOOK AT EACH (LIVE / DEAD) CELL AND FIGURE OUT HOW MANY LIVE CELLS ARE AROUND IT
+            for (int i = 1; i<n+1;i++)
+            { //this line + one below goes through the board at each value(each cell)
+                for(int x = 1; x<n+1; x++)
+                {
+                    if(dedoalive[i][x])
+                    { //if one of them is alive...
+                        for(int r = -1; r <= 1; r+=1)
+                        { //runs for loop for all squares around the block
+                            for(int r2 = -1; r2 <=1; r2+=1)
+                            {
+                                if(r == 0 && r2 == 0)
+                                { //skips if 0,0 (dont need to count the cell initially picked)
+                                    continue; //skips it i its 0,0
+                                }
+                                if(dedoalive[(i)+(r)][(x)+(r2)])
+                                { //a cell around the block was alive
+                                    proximitycounter[i][x]++; //counter goes up for number of live cells around that live cell
+                                }
+                            }
+                        }
+                    }
+                    if(!dedoalive[i][x])
+                    {//finds a ded cell
+                        for(int r = -1; r <= 1; r+=1)
+                        { //runs for loop for all squares around the block
+                            for(int r2 = -1; r2 <=1; r2+=1)
+                            {
+                                if(r == 0 && r2 == 0)
+                                { //skips if 0,0 (don't need to count the cell initially picked)
+                                    continue;
+                                }
+                                if(dedoalive[(i)+(r)][(x)+(r2)])
+                                { //a cell around the block was alive
+                                    proximitycounter[i][x]++; //counter go up
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //kill em if they had a certain number round em
+            for (int i = 1; i<n+1;i++)
+            { //this line + one below goes through the block list
+                for(int x = 1; x<n+1; x++)
+                {
+                    if((proximitycounter[i][x] < 2 || proximitycounter[i][x] > 3) && (dedoalive[i][x]))
+                    {
+                        dedoalive[i][x] = false; //kill it
+                    }
+                    if((proximitycounter[i][x] == 3) && (!dedoalive[i][x]))
+                    {
+                        dedoalive[i][x] = true; //rebirth
+                    }
+                }
+            }
+            //reset numbers
+            for (int i = 1; i<n+1;i++)
+            { //this line + one below goes through the proximity counter list
+                for(int x = 1; x<n+1; x++)
+                {
+                    proximitycounter[i][x] = 0;
+                }
+            }
+
+            //plot grid/ clear state
+            StdDraw.clear(StdDraw.DARK_GRAY);
+            StdDraw.setPenColor(StdDraw.BLACK);
+            for (int i = 0; i <= n+2; i++)
+            {
+                StdDraw.line(0,i,n+2, i);
+            }
+            for (int x = 0; x <= n+2; x++)
+            {
+                StdDraw.line(x, 0, x, n+2);
+            }
+
+            //draw the alive squares:
+            StdDraw.setPenColor(StdDraw.CYAN);
+            for (int x = 1; x <n+1; x++)
+            {
+                for (int y = 1; y < n+1; y++)
+                {
+                    if (dedoalive[x][y])
+                    {
+                        StdDraw.filledSquare(x+.5,y+.5,.499999);
+                    }
+                }
+            }
+            // copy offscreen buffer to onscreen
+            StdDraw.show();
+
+            // pause for 35 ms
+            StdDraw.pause(35);
+        }
+    }
+}
+/*
+Different presets here
+//Glider GUN Glider GUN Glider GUN Glider GUN Glider GUN Glider GUN Glider GUN
+        dedoalive[2][n-5] = true;//left block
+        dedoalive[2][n-6] = true;
+        dedoalive[3][n-5] = true;
+        dedoalive[3][n-6] = true;
+
+        dedoalive[11+1][n-5] = true;  // left semi circle
+        dedoalive[11+1][n-6] = true;
+        dedoalive[11+1][n-7] = true;
+
+        dedoalive[12+1][n-4] = true;
+        dedoalive[12+1][n-8] = true;
+        dedoalive[13+1][n-3] = true;
+        dedoalive[14+1][n-3] = true;
+        dedoalive[13+1][n-9] = true;
+        dedoalive[14+1][n-9] = true;
+
+        dedoalive[15+1][n-6] = true; //little dot
+        dedoalive[16+1][n-4] = true;
+        dedoalive[16+1][n-8] = true;
+        dedoalive[17+1][n-5] = true;
+        dedoalive[17+1][n-6] = true;//right thing
+        dedoalive[17+1][n-7] = true;
+        dedoalive[18+1][n-6] = true;
+
+        dedoalive[21+1][n-3] = true;
+        dedoalive[21+1][n-4] = true;
+        dedoalive[21+1][n-5] = true;
+        dedoalive[22+1][n-3] = true;
+        dedoalive[22+1][n-4] = true;
+        dedoalive[22+1][n-5] = true; //weird right bug on its side
+        dedoalive[23+1][n-2] = true;
+        dedoalive[23+1][n-6] = true;
+        dedoalive[25+1][n-1] = true;
+        dedoalive[25+1][n-2] = true;
+        dedoalive[25+1][n-6] = true;
+        dedoalive[25+1][n-7] = true;
+
+        dedoalive[35+1][n-3] = true;
+        dedoalive[35+1][n-4] = true;
+        dedoalive[36+1][n-3] = true;
+        dedoalive[36+1][n-4] = true;
+
+
+//PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17  PULSAR 17
         dedoalive[5][3] = true;
         dedoalive[6][3] = true;
         dedoalive[7][3] = true;
@@ -98,88 +287,7 @@ public class ConwaysGameOfLife_CK {
         dedoalive[15][11] = true;
         dedoalive[15][12] = true;
         dedoalive[15][13] = true;
-
-
-
-
-
-        //MAIN ANIMATION LOOP
-        while (true)  {
-            //ALL THIS DOES IS LOOK AT EACH (LIVE / DEAD) CELL AND FIGURE OUT HOW MANY LIVE CELLS ARE AROUND IT
-            for (int i = 1; i<n+1;i++){ //this line + one below goes through the board at each value(each cell)
-                for(int x = 1; x<n+1; x++){
-                    if(dedoalive[i][x] == true){ //if one of them is alive...
-                        for(int r = -1; r <= 1; r+=1){ //runs for loop for all squares around the block
-                            for(int r2 = -1; r2 <=1; r2+=1){
-                                if(r == 0 && r2 == 0){ //skips if 0,0 (dont need to count the cell initially picked)
-                                    continue; //skips it i its 0,0
-                                }
-                                if(dedoalive[(i)+(r)][(x)+(r2)] == true){ //a cell around the block was alive
-                                    proximitycounter[i][x]++; //counter goes up for number of live cells around that live cell
-                                }
-                            }
-                        }
-                    }
-                    if(dedoalive[i][x] == false){//finds a ded cell
-                        for(int r = -1; r <= 1; r+=1){ //runs for loop for all squares around the block
-                            for(int r2 = -1; r2 <=1; r2+=1){
-                                if(r == 0 && r2 == 0){ //skips if 0,0 (dont need to count the cell initially picked)
-                                    continue;
-                                }
-                                if(dedoalive[(i)+(r)][(x)+(r2)] == true){ //a cell around the block was alive
-                                    proximitycounter[i][x]++; //counter go up
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            //kill em if they had a certain number round em
-            for (int i = 1; i<n+1;i++){ //this line + one below goes through the block list
-                for(int x = 1; x<n+1; x++){
-                    if((proximitycounter[i][x] < 2 || proximitycounter[i][x] > 3) && dedoalive[i][x] == true){
-                        dedoalive[i][x] = false; //kill it
-                    }
-                    if((proximitycounter[i][x] == 3) && dedoalive[i][x] == false){
-                        dedoalive[i][x] = true; //rebirth
-                    }
-                }
-            }
-            //reset numbers
-            for (int i = 1; i<n+1;i++){ //this line + one below goes through the proximity counter list
-                for(int x = 1; x<n+1; x++){
-                    proximitycounter[i][x] = 0;
-                }
-            }
-
-            //plot grid/ clear state
-            StdDraw.clear(StdDraw.DARK_GRAY);
-            StdDraw.setPenColor(StdDraw.BLACK);
-            for (int i = 0; i <= n+2; i++) {
-                StdDraw.line(0,i,n+2, i);
-            }
-            for (int x = 0; x <= n+2; x++) {
-                StdDraw.line(x, 0, x, n+2);
-            }
-
-            //draw the alive squares:
-            StdDraw.setPenColor(StdDraw.CYAN);
-            for (int x = 1; x <n+1; x++){
-                for (int y = 1; y < n+1; y++){
-                    if (dedoalive[x][y] == true){
-                        StdDraw.filledSquare(x+.5,y+.5,.499999);
-                    }
-                }
-            }
-            // copy offscreen buffer to onscreen
-            StdDraw.show();
-
-            // pause for 300 ms
-            StdDraw.pause(230);
-        }
-    }
-}
+ */
 /**
  * Give a command line argument of any n integer:
  * OUTPUT:
