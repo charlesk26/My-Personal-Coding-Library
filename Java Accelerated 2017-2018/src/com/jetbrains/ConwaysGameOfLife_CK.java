@@ -33,8 +33,10 @@ package com.jetbrains;
  *
  ******************************************************************************/
 
-public class ConwaysGameOfLife_CK {
-    public static void main(String[] args) {
+public class ConwaysGameOfLife_CK
+{
+    public static void main(String[] args)
+    {
         int n = Integer.parseInt(args[0]); //takes comand line n value to determine the dimensions/sclaing
         StdDraw.setCanvasSize(800,800); //set canvas size
         StdDraw.setXscale(1, n+1); //set veiwing scale
@@ -288,8 +290,8 @@ Different presets here
         dedoalive[15][12] = true;
         dedoalive[15][13] = true;
  */
-/**
- * Give a command line argument of any n integer:
- * OUTPUT:
- * UNABLE TO BE DISPLAYED: SCREEN SHOT PROVIDED(when command line arg passed was 17)
+/*
+  Give a command line argument of any n integer:
+  OUTPUT:
+  UNABLE TO BE DISPLAYED: SCREEN SHOT PROVIDED(when command line arg passed was 17)
  */
