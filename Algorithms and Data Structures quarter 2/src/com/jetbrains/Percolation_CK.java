@@ -222,10 +222,8 @@ public class Percolation_CK
         /*
         PercolationStats Testing
          */
-        runStats_test(200,100);
-        runStats_test(200,100);
-        runStats_test(2,100000);
-        runStats_test(500,1000); //BEWARE this one takes some time (not too much but enough)
+
+        runStats_test(3,10000); //BEWARE this one takes some time (not too much but enough)
 
     }
 }
