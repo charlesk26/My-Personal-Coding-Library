@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad0370b1-2c08-48ec-8fcc-7b1560ec2db0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/Percolations Collab.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/out/production/Percolations Collab/com/jetbrains/Percolation_CK.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/out/production/Percolations Collab/com/jetbrains/Percolation_DRK.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/src/com/jetbrains/Percolation_CK.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Percolations Collab/src/com/jetbrains/Percolation_DRK.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jetbrains/Mandelbrot_CK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jetbrains/Mandelbrot_CK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java Accelerated 2017-2018/out/production/Java Accelerated 2017-2018/com/jetbrains/Balls.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Accelerated 2017-2018/out/production/Java Accelerated 2017-2018/com/jetbrains/Balls.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java Accelerated 2017-2018/out/production/Java Accelerated 2017-2018/com/jetbrains/ConwaysGameOfLife_CK.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Accelerated 2017-2018/out/production/Java Accelerated 2017-2018/com/jetbrains/ConwaysGameOfLife_CK.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java Accelerated 2017-2018/out/production/Java Accelerated 2017-2018/com/jetbrains/DodgeGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Accelerated 2017-2018/out/production/Java Accelerated 2017-2018/com/jetbrains/DodgeGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java Accelerated 2017-2018/src/com/jetbrains/Balls.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Accelerated 2017-2018/src/com/jetbrains/Balls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java Accelerated 2017-2018/src/com/jetbrains/ConwaysGameOfLife_CK.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Accelerated 2017-2018/src/com/jetbrains/ConwaysGameOfLife_CK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java Accelerated 2017-2018/src/com/jetbrains/DodgeGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Accelerated 2017-2018/src/com/jetbrains/DodgeGame.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +77,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

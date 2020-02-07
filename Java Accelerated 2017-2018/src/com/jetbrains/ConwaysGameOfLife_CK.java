@@ -187,7 +187,7 @@ public class ConwaysGameOfLife_CK
             StdDraw.show();
 
             // pause for 35 ms
-            StdDraw.pause(35);
+            StdDraw.pause(10);
         }
     }
 }

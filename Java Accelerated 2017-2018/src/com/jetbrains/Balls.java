@@ -32,9 +32,9 @@ public class Balls
     {
         // initialise instance variables
         this.rx = rx;
-        this.vx = 0.1;
+        this.vx = Math.random() / 30;
         this.ry = ry;
-        this.vy = 0.1;
+        this.vy = Math.random() / 30;
         this.radius = 0.175;
     }
     public double getRX() //get Methods

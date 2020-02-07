@@ -37,7 +37,7 @@ public class DodgeGame
         double xPos; //position off player
         double yPos;//position off player
         boolean running = true;
-        StdDraw.setCanvasSize(900,900); //canvas size
+        StdDraw.setCanvasSize(1000,1000); //canvas size
         StdDraw.setXscale(-10,10); //setting scale of canvas
         StdDraw.setYscale(-10,10);
         StdDraw.enableDoubleBuffering(); //drawing --> smoother image //
@@ -70,7 +70,7 @@ public class DodgeGame
             //check if player got a safe zone
             if(safe.Collide(xPos, yPos, safe, .5))
             {
-                balls.add(new Balls(Balls.getRandom(xPos, yPos, .175), Balls.getRandom(xPos, yPos, .175)));
+                balls.add(new Balls(0,0));
                 score++;
                 safe.setNewZone(Balls.getRandom(xPos, yPos, 1.225), Balls.getRandom(xPos, yPos, 1.225));
             }
