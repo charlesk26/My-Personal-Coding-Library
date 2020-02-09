@@ -25,6 +25,7 @@
 
 package com.jetbrains;
 import java.awt.Color;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Mandelbrot_CK
@@ -42,6 +43,22 @@ public class Mandelbrot_CK
     private double endY; //the most negative y value checked (the bi part in a +bi)
     private double size; //the value which determines if the number is within the set or not (If the magnitude of the complex number exceeds 2 then it is outside the set)
     private Picture picture; //the picture object which I'm drawing onto
+
+    private static double scale = 2.5;
+    private static final int power = 2;
+    private static double z0r = 0.355534;
+    private static double z0i = -0.337292;
+    /*
+    private static double z0r = 0.355534;
+    private static double z0i = -0.337292;
+
+    private static double z0r = 0.37;
+    private static double z0i = 0.1;
+
+    private static double z0r = -.54;
+    private static double z0i = .54;
+
+     */
     //NOTE: Drawing onto a picture object is a lot like drawing with python graphics the upper left corner is 0,0 and the bottom left corner is (in this case) 1024,1024
 
     /*
@@ -65,20 +82,38 @@ public class Mandelbrot_CK
         double r0 = startX + Math.abs(startX-endX)*i/maxSide;
         double im0 = startY - Math.abs(startY-endY)*j/maxSide;
         double real = r0;
-        double imaginary = im0;
+        //double imaginary = im0;
+        double imaginary = -im0;
         for(int c = 0; c<max; c++) //run max number of iteration to see if the complex number is in the set
         {
-            if(Math.hypot(real,imaginary)>size) //the complex number is outside of the set (its magnitude is greater than 2
+            if(Math.abs(Math.hypot(real,imaginary))>2) //the complex number is outside of the set (its magnitude is greater than 2
             {
                 return 255; // max rgb value for color
             }
             //place holders to ensure that I perform the arithmetic in the correct sequence to manipulate the complex number in the proper manner
-            double r1 = Math.pow(real,2)-Math.pow(imaginary,2)+r0; //square and add original for both
-            double im1 = 2*real*imaginary+im0;
+            /*double r1 = Math.pow(real,2)-Math.pow(imaginary,2)+r0; //square and add original for both
+            double im1 = 2*real*imaginary+im0;*/
+            double[] real_and_imaginary = calculateZ_to_the_N_power(real,imaginary,power);
+            /*double r1 = real_and_imaginary[0]+z0r;//+r0
+            double im1 = real_and_imaginary[1]+z0i;//+im0*/
+            double r1 = real_and_imaginary[0]+r0;//+r0
+            double im1 = real_and_imaginary[1]+im0;//+im0
             real = r1;
-            imaginary = im1;
+            //imaginary = im1;
+            imaginary = -im1;
         }
         return 0; //the complex number lies in the set (it is black)
+    }
+    private static double[] calculateZ_to_the_N_power(double re, double im, int n)
+    {
+        double r = Math.sqrt((re*re)+(im*im));
+        double r_N = Math.abs(Math.pow(r,n));
+        double theta = Math.atan2(im,re);
+        double realSub = Math.cos(n*theta);
+        double imaginarySub = Math.sin(n*theta);
+        double real = r_N*realSub;
+        double imaginary = r_N*imaginarySub;
+        return new double[] {real,imaginary};
     }
     /*
     Getter method (just for the first call in driver)
@@ -181,8 +216,14 @@ public class Mandelbrot_CK
      */
     public static void main(String[] args)
     {
-        Mandelbrot_CK mandel = new Mandelbrot_CK(50, 500,1024,-1.5,.5, 1.0, -1.0, 2.0);
+        long startTime = System.nanoTime();
+        Mandelbrot_CK mandel = new Mandelbrot_CK(50, 100,1024,-scale,scale, scale, -scale, 2); //50,500,1024,-1.5,-.5,1,-1,2
         mandel.checkRegion(0,0,mandel.getMaxSide()); //check the first square (the entire screen)
+        long endTime   = System.nanoTime();
+        long totalTime = endTime - startTime;
+        System.out.println((double)totalTime/1000000000); //seconds
+        //2.826275593
+
     }
 }
 /*

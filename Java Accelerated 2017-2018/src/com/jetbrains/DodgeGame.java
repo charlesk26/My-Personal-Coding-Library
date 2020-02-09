@@ -32,6 +32,8 @@ public class DodgeGame
         //right is 39
         //enter is 10
         //shift is 20
+        final double player_size = .5; //.5
+        final double ball_size = .02; //.175
         boolean yesno = true; //boolean for resetting game--> wether the player wants to restart or not
         int score = 0; //player score
         double xPos; //position off player
@@ -70,7 +72,10 @@ public class DodgeGame
             //check if player got a safe zone
             if(safe.Collide(xPos, yPos, safe, .5))
             {
-                balls.add(new Balls(0,0));
+                for(int i =0; i<10000; i++)
+                {
+                    balls.add(new Balls(xPos,yPos));
+                }
                 score++;
                 safe.setNewZone(Balls.getRandom(xPos, yPos, 1.225), Balls.getRandom(xPos, yPos, 1.225));
             }
@@ -78,7 +83,7 @@ public class DodgeGame
             //go through balls and check if collide with player and also reset game if they do collide
             for(int i = 0; i<balls.size(); i++)
             {
-                if(balls.get(i).Collide(xPos, yPos, balls.get(i), .5)) //if a bouncing ball collides with player
+                if(balls.get(i).Collide(xPos, yPos, balls.get(i), .005)) //if a bouncing ball collides with player //.5 for last term
                 {
                     running = false;
                     yesno = true;
@@ -107,13 +112,13 @@ public class DodgeGame
 
             //draw player
             StdDraw.setPenColor(10,150,10);
-            StdDraw.filledCircle(xPos, yPos, .5);
+            StdDraw.filledCircle(xPos, yPos, player_size);
 
             //draws balls
             StdDraw.setPenColor(255,198,122);
             for(int i = 0; i<balls.size(); i++)
             {
-                StdDraw.filledCircle(balls.get(i).getRX(), balls.get(i).getRY(), .175);
+                StdDraw.filledCircle(balls.get(i).getRX(), balls.get(i).getRY(), ball_size);
             }
 
             //Draw Score

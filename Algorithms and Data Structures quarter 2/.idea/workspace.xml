@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93631d6d-e2c6-4bd8-8419-b270b9bf1899" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Algorithms and Data Structures Quarter 1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Algorithms and Data Structures Quarter 1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Algorithms and Data Structures Quarter 1/out/production/Algorithms and Data Structures Quarter 1/com/jetbrains/Mandel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Algorithms and Data Structures Quarter 1/out/production/Algorithms and Data Structures Quarter 1/com/jetbrains/Mandel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Algorithms and Data Structures Quarter 1/out/production/Algorithms and Data Structures Quarter 1/com/jetbrains/Mandelbrot_CK.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Algorithms and Data Structures Quarter 1/out/production/Algorithms and Data Structures Quarter 1/com/jetbrains/Mandelbrot_CK.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Algorithms and Data Structures Quarter 1/src/com/jetbrains/Mandel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Algorithms and Data Structures Quarter 1/src/com/jetbrains/Mandel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Algorithms and Data Structures Quarter 1/src/com/jetbrains/Mandelbrot_CK.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Algorithms and Data Structures Quarter 1/src/com/jetbrains/Mandelbrot_CK.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jetbrains/Percolation_CK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jetbrains/Percolation_CK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java Accelerated 2017-2018/out/production/Java Accelerated 2017-2018/com/jetbrains/Balls.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Accelerated 2017-2018/out/production/Java Accelerated 2017-2018/com/jetbrains/Balls.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java Accelerated 2017-2018/out/production/Java Accelerated 2017-2018/com/jetbrains/DodgeGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Accelerated 2017-2018/out/production/Java Accelerated 2017-2018/com/jetbrains/DodgeGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java Accelerated 2017-2018/src/com/jetbrains/Balls.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Accelerated 2017-2018/src/com/jetbrains/Balls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java Accelerated 2017-2018/src/com/jetbrains/DodgeGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java Accelerated 2017-2018/src/com/jetbrains/DodgeGame.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

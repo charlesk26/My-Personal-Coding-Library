@@ -28,14 +28,14 @@ public class Balls
     /**
      * Constructor for objects of class Balls
      */
-    public Balls(double rx, double ry) //constructor
+    public Balls(double px, double py) //constructor
     {
         // initialise instance variables
-        this.rx = rx;
+        this.rx = -px;
         this.vx = Math.random() / 30;
-        this.ry = ry;
+        this.ry = -py;
         this.vy = Math.random() / 30;
-        this.radius = 0.175;
+        this.radius = 0.005; //.175
     }
     public double getRX() //get Methods
     {
