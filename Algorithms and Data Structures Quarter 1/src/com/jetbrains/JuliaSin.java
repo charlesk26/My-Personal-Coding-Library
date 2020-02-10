@@ -7,9 +7,9 @@ import java.util.Scanner;
 public class JuliaSin
 {
     public static int power = 2; //for fun stuff change this ints and + or -
-    public static final double scale = Math.PI*2/1000000;
+    public static final double scale = Math.PI*2;
     private static double c_r = 1;
-    private static double c_i = 1;
+    private static double c_i = -.2;
 
     /*
     private static double c_r = 0;
@@ -36,7 +36,7 @@ public class JuliaSin
     private static double c_r = 0;
     private static double c_i = 1;
      */
-    private static int mand(double x0, double y0, int max, double size)
+    private static int julia_cSinZ(double x0, double y0, int max, double size)
     {
         double x = x0;
         double y = y0; //for the other thing make this negative
@@ -48,10 +48,38 @@ public class JuliaSin
             }
             //double[] realIm = calculateZ_to_the_N_power(x,y,power);
             double[] c = {c_r,c_i};
-            double[] sinZ = calculate_csinz(x,y);
+            double[] sinZ = calculate_sinz(x,y);
             double[] cSinZ = multiply(sinZ,c);
             x = cSinZ[0];
             y = cSinZ[1]; ///and make this negative too
+        }
+
+
+        return 0;
+    }
+    private static int julia_cSin_squaredZ(double x0, double y0, int max, double size)
+    {
+        double x = x0;
+        double y = y0; //for the other thing make this negative
+        for(int i = 0; i<max; i++)
+        {
+            if(Math.hypot(x,y)>=size)
+            {
+                return i;
+            }
+            //double[] realIm = calculateZ_to_the_N_power(x,y,power);
+            double[] c = {c_r,c_i};
+            double[] sinZ = calculate_sinz(x,y);
+            double[] cosZ = calculate_cosz(x,y);
+            double[] tanZ = divide(sinZ,cosZ);
+            //double[] sin_Squared_Z = calculateZ_to_the_N_power(sinZ[0],sinZ[1],1);
+            //double[] c_sin_Squared_Z = multiply(sin_Squared_Z,c);
+            double[] cTanZ = multiply(tanZ,c);
+            /*x = c_sin_Squared_Z[0];
+            y = c_sin_Squared_Z[1]; ///and make this negative too*/
+            x = cTanZ[0];
+            y = cTanZ[1]; ///and make this negative too
+
         }
 
 
@@ -68,16 +96,28 @@ public class JuliaSin
         double imaginary = r_N*imaginarySub;
         return new double[] {real,imaginary};
     }
-    private static double[] calculate_csinz(double re, double im)
+    private static double[] calculate_sinz(double re, double im)
     {
         double real = Math.sin(re)*Math.cosh(im);
         double imaginary = Math.cos(re)*Math.sinh(im);
+        return new double[] {real,imaginary};
+    }
+    private static double[] calculate_cosz(double re, double im)
+    {
+        double real = Math.cos(re)*Math.cosh(im);
+        double imaginary = -Math.sin(re)*Math.sinh(im);
         return new double[] {real,imaginary};
     }
     private static double[] multiply(double[] this0, double[] that)
     {
         double real = this0[0] * that[0] - this0[1] * that[1];
         double imag = this0[0] * that[1] + this0[1] * that[0];
+        return new double[]{real,imag};
+    }
+    private static double[] divide(double[] this0, double[] that)
+    {
+        double real = this0[0] * 1/that[0] - this0[1] * 1/that[1];
+        double imag = this0[0] * 1/that[1] + this0[1] * 1/that[0];
         return new double[]{real,imag};
     }
 
@@ -92,10 +132,10 @@ public class JuliaSin
         final double startY = scale;
         final double endY = -scale;
         final double size = 10000;
-        final double saturation = -2;
-        final int width =5500;
-        final int height = 5500;
-        final int max = 800;
+        final double saturation = -3.3;
+        final int width = 1000;
+        final int height = 1000;
+        final int max = 200;
         int[] colors = new int[max];
         for (int i = 0; i<max; i++)
         {
@@ -113,7 +153,7 @@ public class JuliaSin
                 double x0 = startX + Math.abs(startX-endX)*i/width;
                 double y0 = startY - Math.abs(startY-endY)*j/height;
 
-                picture.setRGB(i,j,colors[mand(x0,y0,max,size)]);
+                picture.setRGB(i,j,colors[julia_cSin_squaredZ(x0,y0,max,size)]);
                 picture.show();
             }
         }

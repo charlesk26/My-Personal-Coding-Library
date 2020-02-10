@@ -45,7 +45,7 @@ public class Mandelbrot_CK
     private Picture picture; //the picture object which I'm drawing onto
 
     private static double scale = 2.5;
-    private static final int power = 2;
+    private static final int power = 4;
     private static double z0r = 0.355534;
     private static double z0i = -0.337292;
     /*
@@ -82,8 +82,8 @@ public class Mandelbrot_CK
         double r0 = startX + Math.abs(startX-endX)*i/maxSide;
         double im0 = startY - Math.abs(startY-endY)*j/maxSide;
         double real = r0;
-        //double imaginary = im0;
-        double imaginary = -im0;
+        double imaginary = im0;
+        //double imaginary = -im0;
         for(int c = 0; c<max; c++) //run max number of iteration to see if the complex number is in the set
         {
             if(Math.abs(Math.hypot(real,imaginary))>2) //the complex number is outside of the set (its magnitude is greater than 2
@@ -99,8 +99,8 @@ public class Mandelbrot_CK
             double r1 = real_and_imaginary[0]+r0;//+r0
             double im1 = real_and_imaginary[1]+im0;//+im0
             real = r1;
-            //imaginary = im1;
-            imaginary = -im1;
+            imaginary = im1;
+            //imaginary = -im1;
         }
         return 0; //the complex number lies in the set (it is black)
     }

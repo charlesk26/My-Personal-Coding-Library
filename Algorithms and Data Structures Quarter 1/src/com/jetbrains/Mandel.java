@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class Mandel
 {
-    public static int power = 6; //for fun stuff change this ints and + or -
-    public static final double scale = 1;
+    public static int power = -2; //for fun stuff change this ints and + or -
+    public static final double scale = 2.5;
     private static double z0r = -0.8;
     private static double z0i = 0.156;
     /*
@@ -71,10 +71,10 @@ public class Mandel
             double[] realIm = calculateZ_to_the_N_power(x,y,power);
 
 
-            double real1 = realIm[0]+z0r;
-            double imaginary1 = realIm[1]+z0i;
-            /*double real1 = realIm[0]+x0;
-            double imaginary1 = realIm[1]+y0;*/
+            /*double real1 = realIm[0]+z0r;
+            double imaginary1 = realIm[1]+z0i;*/
+            double real1 = realIm[0]+x0;
+            double imaginary1 = realIm[1]+y0;
 
             x = real1;
             //y = -imaginary1; ///and make this negative too
@@ -104,11 +104,11 @@ public class Mandel
         final double endX = scale;
         final double startY = scale;
         final double endY = -scale;
-        final double size = 10;
-        final float saturation = .7f;
-        final int width = 12000;
-        final int height = 12000;
-        final int max = 2000; //number of iterations how many times you do the function
+        final double size = 4;
+        final float saturation = .8f;
+        final int width = 1000;
+        final int height = 1000;
+        final int max = 100; //number of iterations how many times you do the function
         int[] colors = new int[max];
         for (int i = 0; i<max; i++)
         {
@@ -131,16 +131,11 @@ public class Mandel
         long endTime   = System.nanoTime();
         long totalTime = endTime - startTime;
         System.out.println((double)totalTime/1000000000);
-        System.out.println("save?");
-        String yesno = scan.nextLine();
-        if(yesno.equals("y"))
-        {
-            picture.save("Time (seconds): "+(double)totalTime/1000000000+" scale: "+scale+" c: "+z0r+"+"+z0i+"i saturation "+saturation+"f iterations: "+max+" size: "+size+"-Julia z^2+c.png");
-        }
-        else
-        {
-            System.out.println("ok");
-        }
+
+
+        //picture.save("Time (seconds): "+(double)totalTime/1000000000+" scale: "+scale+" c: "+z0r+"+"+z0i+"i saturation "+saturation+"f iterations: "+max+" size: "+size+"-Julia z^2+c.png");
+
+
 
     }
 }
