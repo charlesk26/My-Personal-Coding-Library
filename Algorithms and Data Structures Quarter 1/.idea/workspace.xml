@@ -3,23 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ad0370b1-2c08-48ec-8fcc-7b1560ec2db0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Time (seconds): 15.941549535 scale: 0.006283185307179587 c: -0.2+1.0i saturation 0.3f iterations: 100 size: 1000.0-Julia c*sin(z).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Time (seconds): 167.475292475 scale: 6.283185307179587E-6 c: 1.0+1.0i saturation -899.0f iterations: 800 size: 1.0E7-Julia z^2+c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Time (seconds): 214.183091005 scale: 6.283185307179587E-6 c: 1.0+1.0i saturation -2.0f iterations: 800 size: 10000.0-Julia z^2+c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Time (seconds): 377.019459262 scale: 1.2 c: -0.8+0.156i saturation 0.8f iterations: 1000 size: 10.0-Julia z^2+c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Time (seconds): 64.893059774 scale: 1.2 c: 0.355+0.355i saturation 0.5f iterations: 5000 size: 2.0-Julia z^2+c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Time (seconds): 70.849060277 scale: 1.2 c: 0.355+0.355i saturation -0.8f iterations: 1000 size: 2.0-Julia z^2+c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Time (seconds): 754.517454034 scale: 1.0 c: -0.8+0.156i saturation 0.7f iterations: 2000 size: 10.0-Julia z^2+c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Time (seconds): 77.272203491 scale: 1.2 c: 0.355+0.355i saturation -1000.0f iterations: 100 size: 2.0-Julia z^2+c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Time (seconds): 89.439191742 scale: 1.2 c: 0.355+0.355i saturation 0.75f iterations: 1000 size: 2.0-Julia z^2+c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Time (seconds): 91.98556508 scale: 1.2 c: 0.355+0.355i saturation -1000.0f iterations: 500 size: 2.0-Julia z^2+c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Algorithms and Data Structures Quarter 1/com/jetbrains/JuliaSin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algorithms and Data Structures Quarter 1/com/jetbrains/JuliaSin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Algorithms and Data Structures Quarter 1/com/jetbrains/Mandel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algorithms and Data Structures Quarter 1/com/jetbrains/Mandel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Algorithms and Data Structures Quarter 1/com/jetbrains/Mandelbrot_CK.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algorithms and Data Structures Quarter 1/com/jetbrains/Mandelbrot_CK.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jetbrains/JuliaSin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jetbrains/JuliaSin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jetbrains/Mandel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jetbrains/Mandel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jetbrains/Mandelbrot_CK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jetbrains/Mandelbrot_CK.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algorithms and Data Structures quarter 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Algorithms and Data Structures quarter 2/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
